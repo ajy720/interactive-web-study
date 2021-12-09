@@ -1,0 +1,19 @@
+.box-container {
+	display: flex;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	background: rgba(255, 255, 0, 0.7);
+	border: 2px solid;
+
+	&:hover {
+		// transform: rotate(45deg);
+		// transform: skewY(45deg);
+		// transform: translate(30px, 10px);
+		transform: scale(1.5);
+		transform-origin: 0 50%;
+	}
+
+}
