@@ -1,0 +1,23 @@
+@keyframes sample-ani {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(100px, 0);
+	}
+	100% {
+		transform: translate(200px, 100px);
+	}
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	background: rgba(255, 255, 0);
+	border: 2px solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	animation: sample-ani 2s linear infinite;
+}
