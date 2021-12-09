@@ -4,6 +4,7 @@
 	}
 	50% {
 		transform: translate(100px, 0);
+		background-color: orange;
 	}
 	100% {
 		transform: translate(200px, 100px);
@@ -19,5 +20,14 @@
 	justify-content: center;
 	align-items: center;
 
-	animation: sample-ani 2s linear infinite;
+	animation: sample-ani 1s linear infinite alternate;
+	// animation: sample-ani 1s linear forwards;
+	// infinite : 무한반복
+	// forwards : 종료 상태 유지
+	// alternate : 0->100->0 반복
+	
+	&:hover{
+		animation-play-state: paused;
+		// paused : 애니메이션 멈춤
+	}
 }
