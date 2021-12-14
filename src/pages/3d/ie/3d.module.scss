@@ -31,31 +31,20 @@
         
 		// transform 속성 안에 perspective를 줘도 가능
 		// 이 경우 각각 element가 독립적으로 3d 처럼 보임
-		transform: perspective(500px) rotateY(45deg);
-		transition: 1s;
+		// transform: perspective(500px) rotateY(45deg);
+		// transition: 1s;
 
-	}
-    &:hover .card {
-        transform: perspective(500px) rotateY(135deg);
-    }
-}
-
-.world1 {
-	background-color: #fff000;
-	.card {
-		background-color: red;
 	}
 }
 
-.world2 {
+.world {
 	background-color: #ffaa00;
 	.card {
-		transform-style: preserve-3d;
-
-        transform-origin: left;
+		perspective: 500px;
 	}
-
+	
 	.card-side {
+
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -70,21 +59,33 @@
 		border-radius: 0.5em;
 		font-size: 1.5rem;
 
-        // vendor prefix 
+        // vendor prefix
 		-webkit-backface-visibility: hidden;
-		-moz-backface-visibility: hidden;
-		-o-backface-visibility: hidden;
 		backface-visibility: hidden;
-        
+
+		transition: 1s;
 	}
 
+	
 	.front {
 		background-color: #fff;
 		z-index: 1;
+		
+		transform: rotateY(0deg);
 	}
-
+	
+	.card:hover .front{
+		transform: rotateY(180deg);
+	}
+	
+	
 	.back {
 		background-color: rgb(255, 242, 65);
+		
 		transform: rotateY(180deg);
+	}
+
+	.card:hover .back{
+		transform: rotateY(360deg);
 	}
 }

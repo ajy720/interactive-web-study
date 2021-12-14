@@ -7,18 +7,7 @@ const Index = () => {
 
     return (
         <div className="">
-            <div className={cn(styles.world, styles.world2)}>
-                <div className={styles.card}>
-                    CARD
-                </div>
-                <div className={styles.card}>
-                    CARD
-                </div>
-                <div className={styles.card}>
-                    CARD
-                </div>
-            </div>
-            <div className={cn(styles.world, styles.world2)}>
+            <div className={cn(styles.world)}>
                 <div className={styles.card}>
                     <div className={cn(styles["card-side"], styles.front)}>F</div>
                     <div className={cn(styles["card-side"], styles.back)}>B</div>
