@@ -1,0 +1,56 @@
+@keyframes moving {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(70vw);
+	}
+}
+.game {
+	.stage {
+		width: 100vw;
+		height: 100vh;
+		background-color: #fff000;
+		position: relative;
+
+		overflow: hidden;
+	}
+
+	.ilbuni {
+		position: absolute;
+
+		width: 100px;
+		height: 100px;
+
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: contain;
+
+		animation: moving 3s infinite alternate ease-out;
+
+		&.a {
+			background-image: url("../pages/js/images/ilbuni_0.png");
+			bottom: 5%;
+			left: 5%;
+			animation-duration: 2s;
+		}
+		&.b {
+			background-image: url("../pages/js/images/ilbuni_1.png");
+			bottom: 10%;
+			left: 10%;
+			animation-duration: 5s;
+		}
+		&.c {
+			background-image: url("../pages/js/images/ilbuni_2.png");
+			bottom: 5%;
+			left: 10%;
+			animation-duration: 3s;
+		}
+		&.d {
+			background-image: url("../pages/js/images/ilbuni_3.png");
+			bottom: 10%;
+			left: 5%;
+			animation-duration: 6s;
+		}
+	}
+}

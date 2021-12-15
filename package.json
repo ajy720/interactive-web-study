@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "next -p 3001",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $port"
   },
   "devDependencies": {
     "@types/react": "^17.0.37"

@@ -1,5 +1,7 @@
 import { AppProps } from 'next/app';
 import 'Styles/style.scss'
+import 'Styles/js.scss'
+import 'Styles/js.game.scss'
 
 
 const App = ({ Component, pageProps }: AppProps) => {
