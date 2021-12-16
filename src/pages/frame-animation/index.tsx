@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './frame.module.scss'
-import image from './sprite_spaceship.png'
 
 
 const Index = () => {

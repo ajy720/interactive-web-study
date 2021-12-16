@@ -1,8 +1,3 @@
-import image0 from './images/ilbuni_0.png'
-import image1 from './images/ilbuni_1.png'
-import image2 from './images/ilbuni_2.png'
-import image3 from './images/ilbuni_3.png'
-
 import Image from 'next/image'
 import React, { ReactElement, useEffect, useRef, useState } from "react"
 import cn from 'classnames'
@@ -36,7 +31,7 @@ const Index = () => {
         let temp = [...toggle];
         console.log("Origin Toggle", toggle);
 
-        // temp[idx] = Boolean(Number(temp[idx]) ^ 1);
+        temp[idx] = Boolean(Number(temp[idx]) ^ 1);
 
         setToggle(temp);
 
@@ -45,9 +40,9 @@ const Index = () => {
         }
     }, [idx])
 
-    // useInterval(() => {
-    //     setIdx((idx + 1) % 4)
-    // }, 1000)
+    useInterval(() => {
+        setIdx((idx + 1) % 4)
+    }, 1000)
 
     const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
         e.stopPropagation()
@@ -74,23 +69,11 @@ const Index = () => {
                     static: toggle[0],
                     special: !toggle[0]
                 }, "a", "ilbuni")}>
-                    <Image
-                        src={image0}
-                        alt="일분이"
-                        layout="fill"
-                        objectFit="contain"
-                    />
                 </div>
                 <div className={cn({
                     static: toggle[1],
                     special: !toggle[1]
                 }, "b", "ilbuni")}>
-                    <Image
-                        src={image1}
-                        alt="일분이"
-                        layout="fill"
-                        objectFit="contain"
-                    />
                 </div>
                 <div className={cn({
                     static: toggle[2],
@@ -98,23 +81,11 @@ const Index = () => {
                 }, "c", "ilbuni")}
                     onClick={onClick}
                     ref={ref}>
-                    <Image
-                        src={image2}
-                        alt="일분이"
-                        layout="fill"
-                        objectFit="contain"
-                    />
                 </div>
                 <div className={cn({
                     static: toggle[3],
                     special: !toggle[3]
                 }, "d", "ilbuni")} >
-                    <Image
-                        src={image3}
-                        alt="일분이"
-                        layout="fill"
-                        objectFit="contain"
-                    />
                 </div>
             </div>
         </div >

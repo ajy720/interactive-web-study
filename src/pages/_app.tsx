@@ -4,6 +4,7 @@ import 'Styles/js.scss'
 import 'Styles/js.game.scss'
 import 'Styles/js.delegation.scss'
 import 'Styles/example.scss'
+import 'Styles/object.scss'
 
 
 const App = ({ Component, pageProps }: AppProps) => {

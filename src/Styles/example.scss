@@ -74,8 +74,8 @@
 				}
 			}
 
-			// &.open {
-			&:hover {
+			&.open {
+			// &:hover {
 				.door-body {
 					transform: rotateY(-105deg);
 				}
