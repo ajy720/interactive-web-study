@@ -1,0 +1,116 @@
+.align-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@keyframes open {
+	from {
+		transform: rotateY(0deg);
+	}
+
+	to {
+		transform: rotateY(-105deg);
+	}
+}
+
+@keyframes close {
+	from {
+		transform: rotateY(-105deg);
+	}
+
+	to {
+		transform: rotateY(0deg);
+	}
+}
+
+.example {
+	width: 100vw;
+	height: 100vh;
+	background-color: gray;
+
+	.stage {
+		display: flex;
+		.door {
+			width: 150px;
+			height: 200px;
+			position: relative;
+
+			perspective: 1000px;
+
+			.door-body {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				opacity: 0.8;
+
+				transition: 1s;
+				transform-origin: left;
+				transform: rotateY(0deg);
+			}
+
+			.door-back {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				background-color: black;
+
+				overflow: hidden;
+
+				.ilbuni {
+					width: 100%;
+					height: 130px;
+					background-size: contain;
+					background-position: 50% 100%;
+					background-repeat: no-repeat;
+					transition: 1s 0.5s;
+					transform: translate3d(100%, 0, 0);
+				}
+			}
+
+			// &.open {
+			&:hover {
+				.door-body {
+					transform: rotateY(-105deg);
+				}
+
+				.door-back {
+					.ilbuni {
+						transform: translate3d(0, 0, 0);
+					}
+				}
+			}
+
+			&:nth-child(1) {
+				.door-body {
+					background-color: red;
+				}
+				.ilbuni {
+					background-image: url("../pages/js/images/ilbuni_0.png");
+				}
+			}
+			&:nth-child(2) {
+				.door-body {
+					background-color: green;
+				}
+				.ilbuni {
+					background-image: url("../pages/js/images/ilbuni_1.png");
+				}
+			}
+			&:nth-child(3) {
+				.door-body {
+					background-color: blue;
+				}
+				.ilbuni {
+					background-image: url("../pages/js/images/ilbuni_2.png");
+				}
+			}
+		}
+	}
+}

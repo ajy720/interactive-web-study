@@ -1,0 +1,64 @@
+.delegation {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu {
+	padding: 30px;
+	width: fit-content;
+
+	border-radius: 1em;
+	background-color: rgb(235, 235, 235);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.menu-btn {
+		background-color: #fff000;
+		border: 2px solid white;
+		border-radius: 1em;
+
+		width: 150px;
+		height: 70px;
+
+		margin: 0 20px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.image,
+		.text {
+            // pointer event를 그냥 부모에게 쓰루하는 방법
+			// pointer-events: none;
+		}
+
+		.image {
+			width: 50px;
+			height: 50px;
+			margin-right: 8px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		&:nth-child(1) {
+			.image {
+				background-image: url("../pages/js/images/ilbuni_0.png");
+			}
+		}
+		&:nth-child(2) {
+			.image {
+				background-image: url("../pages/js/images/ilbuni_1.png");
+			}
+		}
+		&:nth-child(3) {
+			.image {
+				background-image: url("../pages/js/images/ilbuni_2.png");
+			}
+		}
+	}
+}
