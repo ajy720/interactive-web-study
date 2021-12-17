@@ -1,3 +1,13 @@
+@keyframes ball-ani {
+	from {
+		// transform: translate(0, 0);
+	}
+
+	to {
+		transform: translate(200px, 200px);
+	}
+}
+
 .ball {
 	position: absolute;
 
@@ -10,8 +20,13 @@
 	transition: 1s;
 
 	margin: -15px -15px;
-
+	
+	border: 0px solid red;
 	&.moving {
 		background-color: red;
+	}
+	
+	&.animating {
+		border-width: 5px;
 	}
 }
