@@ -1,0 +1,17 @@
+.ball {
+	position: absolute;
+
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+
+	background-color: dodgerblue;
+
+	transition: 1s;
+
+	margin: -15px -15px;
+
+	&.moving {
+		background-color: red;
+	}
+}
