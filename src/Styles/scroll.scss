@@ -1,0 +1,46 @@
+.Scroll {
+	width: 100vw;
+
+	background-color: rgb(90, 138, 45);
+
+	.output {
+		position: fixed;
+		z-index: 1;
+
+		width: 100%;
+
+		background-color: rgba(0, 0, 0, 0.5);
+		color: white;
+
+		text-align: center;
+		font-weight: 300;
+		font-size: 2rem;
+	}
+
+	.content {
+		height: 1000vh;
+		padding: 20%;
+
+		background: yellowgreen;
+
+		* {
+			display: block;
+		}
+
+		.ilbuni {
+			width: 150px;
+			height: 150px;
+			margin: 20px auto;
+			transition: 1s;
+
+			background-image: url("../pages/js/images/ilbuni_0.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+
+			&.zoom {
+				transform: scale(2);
+			}
+		}
+	}
+}

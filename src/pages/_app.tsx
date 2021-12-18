@@ -5,6 +5,7 @@ import 'Styles/js.game.scss'
 import 'Styles/js.delegation.scss'
 import 'Styles/example.scss'
 import 'Styles/object.scss'
+import 'Styles/scroll.scss'
 
 
 const App = ({ Component, pageProps }: AppProps) => {

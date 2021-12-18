@@ -1,7 +1,5 @@
-import Image from 'next/image'
 import React, { ReactElement, useEffect, useRef, useState } from "react"
 import cn from 'classnames'
-import classNames from "classnames/bind"
 import useInterval from './hooks'
 
 const Index = () => {
