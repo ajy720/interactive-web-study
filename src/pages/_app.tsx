@@ -8,7 +8,6 @@ import 'Styles/object.scss'
 import 'Styles/scroll.scss'
 import 'Styles/animation.event.scss'
 
-
 const App = ({ Component, pageProps }: AppProps) => {
     return <Component {...pageProps} />
 }

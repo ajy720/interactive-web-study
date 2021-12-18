@@ -4,3 +4,7 @@
 
 next.js를 이용해 각 페이지별로 스타일 정리
 
+
+## Styles
+
+css module 사용
