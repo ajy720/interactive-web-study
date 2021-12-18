@@ -8,7 +8,7 @@ export default () => {
         const btn = document.querySelector(`.${styles.btn}`)
 
         btn.addEventListener("click", () => {
-            // cleartTimeOut()에 setTimeout의 반환값을 넣으면 timeout 취소
+            // clearInterval()에 setInterval 반환값을 넣으면 interval 취소
             clearInterval(timeId)
         })
 
